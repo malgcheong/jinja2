@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- 1. 기본 예제 -->
+    {{ title }}
+    {{ content }}
+
+    <!-- 2. for문 예제 -->
+    <ul>
+        {% for item in items %}
+            <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+
+    <!-- 3. if문 예제 -->
+    {% if user.logged_in == 1 %}
+    <p>Welcome, {{ user.username }}!</p>
+    {% elif user.logged_in == 2 %}
+    <p>Wrong!!</p>
+    {% else %}
+    <p>Please log in.</p>
+    {% endif %}
+
+</body>
+</html>
